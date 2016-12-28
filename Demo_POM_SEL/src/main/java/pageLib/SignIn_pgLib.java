@@ -81,4 +81,11 @@ public class SignIn_pgLib {
         log.info("validating authentication fail msg for invalid sign in ... ");
         return driver.findElement(authenticationFailMsg).getText();
     }
+
+    public void commonloginToApp(){
+        clkSignInInhmePg();
+        passPswdInSignIn("abctest@gmail.com");
+        passPswdInSignIn("123456");
+        clkSignBtn();
+    }
 }

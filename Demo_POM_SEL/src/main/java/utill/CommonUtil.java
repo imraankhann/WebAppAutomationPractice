@@ -1,5 +1,8 @@
 package utill;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -28,6 +31,12 @@ public class CommonUtil {
 			return false;
 		}
 		return true;
+	}
+
+	public void selectByNameMethod(WebElement ele) throws InterruptedException {
+		Select s=new Select(ele);
+		Thread.sleep(2000);
+
 	}
 
 }
